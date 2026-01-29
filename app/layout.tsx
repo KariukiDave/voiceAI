@@ -1,6 +1,7 @@
 import "./globals.css"
 import { Poppins, Roboto } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import ScrollToTop from "@/components/scroll-to-top"
 
 // Load Poppins font
 const poppins = Poppins({
@@ -21,7 +22,7 @@ const roboto = Roboto({
 export const metadata = {
   title: "VoiceAI - AI-Powered Voice Agents",
   description: "Automate your calls with human-like AI voice agents",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({ children }) {
@@ -30,11 +31,9 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.variable} ${roboto.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>
   )
 }
-
-
-import './globals.css'

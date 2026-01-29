@@ -35,11 +35,13 @@ export default function FeaturesSection() {
   ]
 
   return (
-    <section id="features" className="py-16">
+    <section id="features" className="py-16 bg-white">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Powerful Features</h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
+          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl font-poppins text-deepBlue">
+            Powerful Features
+          </h2>
+          <p className="max-w-[700px] text-gray-600 md:text-xl/relaxed font-roboto">
             Our AI voice agents come packed with features designed to enhance customer experience and streamline your
             operations.
           </p>
@@ -48,11 +50,11 @@ export default function FeaturesSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col space-y-3 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+              className="flex flex-col space-y-3 p-6 bg-offWhite rounded-xl border border-softGray shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="p-2 bg-blue-50 rounded-lg w-fit text-blue-600">{feature.icon}</div>
-              <h3 className="text-xl font-bold">{feature.title}</h3>
-              <p className="text-gray-500">{feature.description}</p>
+              <div className="p-2 bg-deepBlue/5 rounded-lg w-fit text-vibrantCyan">{feature.icon}</div>
+              <h3 className="text-xl font-bold font-poppins text-deepBlue">{feature.title}</h3>
+              <p className="text-gray-600 font-roboto">{feature.description}</p>
             </div>
           ))}
         </div>

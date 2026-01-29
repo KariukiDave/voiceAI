@@ -58,20 +58,20 @@ export default function PricingSection() {
     },
   ]
 
-  // Calculate annual prices (10% discount)
+  // Calculate annual prices (35% discount)
   const getDiscountedMonthlyPrice = (price) => {
     if (price === null) return null
-    return (price * 0.9).toFixed(2)
+    return (price * 0.65).toFixed(2)
   }
 
   const getAnnualPrice = (price) => {
     if (price === null) return null
-    return (price * 0.9 * 12).toFixed(2)
+    return (price * 0.65 * 12).toFixed(2)
   }
 
   const getAnnualSavings = (price) => {
     if (price === null) return null
-    return (price * 0.1 * 12).toFixed(2)
+    return (price * 0.35 * 12).toFixed(2)
   }
 
   const formatPrice = (price) => {
@@ -101,7 +101,7 @@ export default function PricingSection() {
               Annual
             </Label>
             <span className="ml-2 text-xs font-medium bg-green-100 text-green-800 px-2 py-0.5 rounded-full">
-              Save 10%
+              Save 35%
             </span>
           </div>
         </div>

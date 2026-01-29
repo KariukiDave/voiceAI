@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Play } from "lucide-react"
+import Link from "next/link"
 
 export default function HeroSection() {
   return (
@@ -23,9 +24,11 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button size="lg" className="bg-deepBlue hover:bg-primary-hover text-white font-medium">
-                Get a Demo
-              </Button>
+              <Link href="/request-demo">
+                <Button size="lg" className="bg-deepBlue hover:bg-primary-hover text-white font-medium">
+                  Get a Demo
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="gap-1 border-deepBlue text-deepBlue hover:bg-deepBlue/5">
                 <Play size={16} className="text-vibrantCyan" />
                 Watch It in Action

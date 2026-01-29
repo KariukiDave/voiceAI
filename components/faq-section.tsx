@@ -35,28 +35,30 @@ export default function FaqSection() {
   ]
 
   return (
-    <section id="faq" className="py-16 bg-gray-50">
+    <section id="faq" className="py-16 bg-offWhite">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Frequently Asked Questions</h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
+          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl font-poppins text-deepBlue">
+            Frequently Asked Questions
+          </h2>
+          <p className="max-w-[700px] text-gray-600 md:text-xl/relaxed font-roboto">
             Find answers to common questions about our AI voice agent solution.
           </p>
         </div>
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                <AccordionContent className="text-gray-500">{faq.answer}</AccordionContent>
+              <AccordionItem key={index} value={`item-${index}`} className="border-softGray">
+                <AccordionTrigger className="text-left font-poppins text-deepBlue">{faq.question}</AccordionTrigger>
+                <AccordionContent className="text-gray-600 font-roboto">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
         <div className="mt-12 text-center">
-          <p className="text-gray-500">
+          <p className="text-gray-600 font-roboto">
             Still have questions?{" "}
-            <a href="#" className="text-blue-600 font-medium hover:underline">
+            <a href="#" className="text-vibrantCyan font-medium hover:underline">
               Contact our support team
             </a>{" "}
             for more information.

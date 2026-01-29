@@ -3,49 +3,49 @@ import { Headphones, Calendar, Package, Users, CreditCard, HelpCircle, Building,
 
 const useCases = [
   {
-    icon: <Headphones className="h-6 w-6 text-blue-600" />,
+    icon: <Headphones className="h-6 w-6 text-vibrantCyan" />,
     title: "Customer Support Automation",
     description: "Handle routine inquiries automatically",
     href: "/use-cases#customer-support",
   },
   {
-    icon: <Calendar className="h-6 w-6 text-blue-600" />,
+    icon: <Calendar className="h-6 w-6 text-vibrantCyan" />,
     title: "Appointment Booking",
     description: "Book and manage appointments via voice",
     href: "/use-cases#appointment-booking",
   },
   {
-    icon: <Package className="h-6 w-6 text-blue-600" />,
+    icon: <Package className="h-6 w-6 text-vibrantCyan" />,
     title: "Order Tracking",
     description: "Let customers check order status via phone",
     href: "/use-cases#order-tracking",
   },
   {
-    icon: <Users className="h-6 w-6 text-blue-600" />,
+    icon: <Users className="h-6 w-6 text-vibrantCyan" />,
     title: "Lead Qualification",
     description: "Qualify sales leads through automated calls",
     href: "/use-cases#lead-qualification",
   },
   {
-    icon: <CreditCard className="h-6 w-6 text-blue-600" />,
+    icon: <CreditCard className="h-6 w-6 text-vibrantCyan" />,
     title: "Billing & Payments Inquiries",
     description: "Answer billing-related questions",
     href: "/use-cases#billing-payments",
   },
   {
-    icon: <HelpCircle className="h-6 w-6 text-blue-600" />,
+    icon: <HelpCircle className="h-6 w-6 text-vibrantCyan" />,
     title: "Product FAQs",
     description: "Respond to common questions instantly",
     href: "/use-cases#product-faqs",
   },
   {
-    icon: <Building className="h-6 w-6 text-blue-600" />,
+    icon: <Building className="h-6 w-6 text-vibrantCyan" />,
     title: "Local Business Hotline",
     description: "Affordable AI agents for Kenyan SMEs",
     href: "/use-cases#local-business",
   },
   {
-    icon: <Clock className="h-6 w-6 text-blue-600" />,
+    icon: <Clock className="h-6 w-6 text-vibrantCyan" />,
     title: "After-Hours Support",
     description: "24/7 coverage for support and sales",
     href: "/use-cases#after-hours",
@@ -61,22 +61,25 @@ export default function UseCasesMegaMenu() {
             <Link
               key={index}
               href={useCase.href}
-              className="group relative flex gap-x-4 rounded-lg p-4 hover:bg-gray-50"
+              className="group relative flex gap-x-4 rounded-lg p-4 hover:bg-vibrantCyan/5"
             >
               <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                 {useCase.icon}
               </div>
               <div>
-                <div className="font-semibold text-gray-900">{useCase.title}</div>
-                <p className="mt-1 text-gray-600">{useCase.description}</p>
+                <div className="font-semibold text-deepBlue font-poppins">{useCase.title}</div>
+                <p className="mt-1 text-gray-600 font-roboto">{useCase.description}</p>
               </div>
             </Link>
           ))}
         </div>
         <div className="bg-gray-50 px-8 py-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-semibold leading-6 text-gray-900">Explore all use cases</h3>
-            <Link href="/use-cases" className="text-sm font-semibold text-blue-600 hover:text-blue-500">
+            <h3 className="text-sm font-semibold leading-6 text-deepBlue font-poppins">Explore all use cases</h3>
+            <Link
+              href="/use-cases"
+              className="text-sm font-semibold text-vibrantCyan hover:text-vibrantCyan/80 font-poppins"
+            >
               View all use cases
               <span aria-hidden="true"> →</span>
             </Link>

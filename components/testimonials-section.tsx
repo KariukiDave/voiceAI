@@ -27,23 +27,25 @@ export default function TestimonialsSection() {
   ]
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 bg-gradient-to-b from-white to-offWhite">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">What Our Customers Say</h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
+          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl font-poppins text-deepBlue">
+            What Our Customers Say
+          </h2>
+          <p className="max-w-[700px] text-gray-600 md:text-xl/relaxed font-roboto">
             Businesses around the world trust our AI voice agents to handle their customer calls.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="overflow-hidden">
+            <Card key={index} className="overflow-hidden border-softGray">
               <CardContent className="p-6 flex flex-col space-y-4">
-                <Quote className="h-8 w-8 text-blue-100" />
-                <p className="text-gray-700 italic">{testimonial.quote}</p>
-                <div className="pt-4 border-t border-gray-100">
-                  <p className="font-semibold">{testimonial.author}</p>
-                  <p className="text-sm text-gray-500">
+                <Quote className="h-8 w-8 text-vibrantCyan/30" />
+                <p className="text-gray-600 italic font-roboto">{testimonial.quote}</p>
+                <div className="pt-4 border-t border-softGray">
+                  <p className="font-semibold font-poppins text-deepBlue">{testimonial.author}</p>
+                  <p className="text-sm text-gray-500 font-roboto">
                     {testimonial.position}, {testimonial.company}
                   </p>
                 </div>
