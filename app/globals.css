@@ -58,7 +58,9 @@ h6 {
     @apply border-border;
   }
   body {
-    @apply bg-offWhite text-deepBlue font-roboto;
+    background-color: #f8f9fa;
+    color: #2a2e3b;
+    @apply font-roboto;
   }
   h1,
   h2,
